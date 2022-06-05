@@ -1,0 +1,13 @@
+[Unit]
+Description=Data generator
+
+[Service]
+Type=simple
+WorkingDirectory=/root/sensor-app/data-generator
+EnvironmentFile=/root/sensor-app/data-generator/.env
+ExecStart=/usr/bin/python3 sensor-faker.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

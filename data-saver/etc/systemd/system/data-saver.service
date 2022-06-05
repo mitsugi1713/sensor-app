@@ -1,0 +1,13 @@
+[Unit]
+Description=Data saver
+
+[Service]
+Type=simple
+WorkingDirectory=/root/sensor-app/data-saver
+EnvironmentFile=/root/sensor-app/data-saver/.env
+ExecStart=/usr/bin/python3 /root/sensor-app/data-saver/data-saver.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

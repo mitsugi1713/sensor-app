@@ -1,6 +1,3 @@
-cassandra-driver
-prettytable
 python-dotenv
 requests
-pyopenssl
-service-identity
+urllib3
